@@ -1,0 +1,77 @@
+import java.util.*;
+ 
+ public class Resto
+ {
+    public static void main(String[] args) {
+   	double a,b,c=0;
+   	String op;
+   	int flag=1;
+   	Scanner sc=new Scanner(System.in);
+
+   	do{ System.out.print(">");
+   		a=sc.nextDouble();
+   		op=sc.next();
+   		b=sc.nextDouble();
+   		//add
+   		if(op.equals("+"))
+   		{
+   			c=a+b;
+   		}
+
+   		//subtract
+   		else if(op.equals("-"))
+   		{
+   			c=a-b;
+   		}
+
+   		//Multiply
+   		else if(op.equals("*"))
+   		{
+   			c=a*b;
+   		}
+
+   		//divide
+   		else if(op.equals("/"))
+   		{
+   			c=a/b;
+   		}
+
+   		//mod
+   		else if(op.equals("%"))
+   		{
+   			c=a%b;
+   		}
+
+   		 
+
+   		else
+   		{
+   			System.out.println("Wrong operator");
+   			flag=0;
+   			c=0;
+   		}
+
+   		System.out.println(c);
+
+   	} while(flag==1);
+
+   }
+ }
+
+
+// Make Sure to keep spaces between number and operator
+
+Output
+>5 + 5
+10.0
+>8 - 9
+-1.0
+>6 * 2
+12.0
+>5 / 2
+2.5
+>126 % 3
+0.0
+>127 % 3
+1.0
+>

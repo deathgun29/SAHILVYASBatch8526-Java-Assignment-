@@ -1,0 +1,40 @@
+//Number Trick   
+//There won't be any output attached to this code because to experience the magic of this code copy, paste into editor and run!!!!!!!
+
+
+
+import java.util.*;
+ import java.lang.Math;
+ public class Resto
+ {
+   public static void main(String args[]) {
+        try{
+   int a=(int)(Math.random()*10);
+     int b=2*a;
+     Scanner sc=new Scanner(System.in);
+      //System.out.println("Sum of x+y = " + b);
+      
+      System.out.println("GUESS A NUMBER BETWEEN 1-20!   'make sure you remember it till the end'");
+      Thread.sleep(6000);
+
+      System.out.println("Now! Double your Number");
+      Thread.sleep(5000);
+      System.out.println("Add ---> "+ b +" <--- to your Number");
+      Thread.sleep(5000);
+      System.out.println("Half your number!");
+      Thread.sleep(5000);
+      System.out.println("Subtract the number you thought in the beginning from the number you are having in your mind right now \n");
+      Thread.sleep(8000);
+      System.out.println("You will be left with  ---->>  "+(b/2)+" <<---- in your mind!!!");
+      
+        }
+        catch(Exception e)
+        {
+           System.out.println("Nor");
+        }
+      
+      
+    }
+ }
+ 
+ 

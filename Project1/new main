@@ -1,0 +1,54 @@
+@charset "ISO-8859-1";
+body
+{
+	background-image: url('bg1.jpg'); 
+	/*height :10vh;*/
+	/*width: 100%;*/
+   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+
+	
+	
+}
+.bg{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.hd
+{   
+	font-family: Monospace;
+	font-weight: 500;
+	text-align: center;
+	color: darkblue;
+	padding-bottom: 18px;
+}
+.logo
+{
+	display: block;
+	width: 10%;
+
+  margin-left: auto;
+	margin-right: auto;
+
+}
+  
+  
+
+.form-container
+{
+	/*position: absolute;*/
+	/*top:15vh;*/
+	background:white;
+	padding: 50px;
+	padding-top: 30px;
+	padding-bottom: 70px;
+	border-radius: 8px;
+	box-shadow: 0px 0px 8px 0px;
+}
+
+

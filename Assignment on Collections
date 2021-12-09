@@ -45,6 +45,77 @@ System.out.println(bl);
 
 
 
+Parts 2
+package practice.day3;
+//////////Emptying an Array list
+
+import java.util.*;
+public class Q2 {
+	public static void main(String[] args)
+	{
+		ArrayList<Integer> al=new ArrayList<>();
+		
+		al.add(1);
+		al.add(2);
+		al.add(3);
+		al.add(4);                             
+		al.add(5);
+		int n=al.size();
+;	      System.out.println("Array List is " + al);
+	      
+	      
+		for(int i=0;i<n;i++) // to empty an array without pre define function
+		{     
+			//System.out.println(i);
+			System.out.println(al.get(0));
+			al.remove(0);
+		}
+		//al.clear();
+		 n=al.size();
+//		System.out.println(n);
+		
+//		if(al.isEmpty()) //to check if array is empty or not
+//	    	  System.out.println("Yes list is empty");
+		
+		
+		if(n==0)
+		{
+			System.out.println("Yes list is empty");
+		}
+		System.out.println(al);
+	}
+}
+
+
+
+
+
+
+Parts 3
+package practice.day3;
+
+import java.util.LinkedList;
+
+//import java.util.Collection;
+
+public class Q3 {
+	public static void main(String[] args)
+	{
+	LinkedList<Integer> al=new LinkedList<Integer>();
+	
+	al.add(1);
+	al.add(2);
+	al.add(3);
+	al.add(4);
+	al.add(5);
+	al.add(3,71); // adding element at specific position in Linked List
+	al.addFirst(21); //adding element at First position in Linked List
+	al.addLast(51);  ////adding element at Last position in Linked List
+	int n=al.size();
+	System.out.println(n);
+	System.out.println(al);
+}
+}
 
 
 

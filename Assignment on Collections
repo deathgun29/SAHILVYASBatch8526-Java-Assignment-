@@ -1,0 +1,51 @@
+package practice.day3;
+import java.util.*;
+public class Q1 {
+public static void main(String[] args)
+{
+ArrayList<Integer> al=new ArrayList<>(10);
+ArrayList<Integer> bl=new ArrayList<>();
+al.add(1);
+al.add(2);
+al.add(3);
+al.add(4);
+al.add(5);
+int n=al.size();
+System.out.println("List Size "+n);
+//bl.add(6);         //to add two arraylist
+//bl.add(7);
+//bl.add(8);
+//al.addAll(bl);
+//System.out.println(al);
+
+//for(Integer b : bl)
+//{
+//   al.add(b);	
+//}
+
+for (Integer a : al)           //copy one array to another
+{
+	bl.add(a);
+}
+
+System.out.println(bl);
+//for (Integer b : bl)
+//{
+//	System.out.println("Array List B" + b);
+//}
+//for(int i=0;i<al.size();i++)
+//{
+//	System.out.println(al.get(i));
+//}
+}
+}
+
+
+
+
+
+
+
+
+
+

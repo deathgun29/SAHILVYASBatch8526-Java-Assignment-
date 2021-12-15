@@ -1,0 +1,317 @@
+Q1.	 Java Program to Swap Two Numbers
+
+package Dec14;
+
+import java.util.Scanner;
+
+public class Swapnum {
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter 1st number");
+		int x=sc.nextInt();
+		System.out.println("Enter 2st number");
+		int y=sc.nextInt();
+		System.out.println("Numbers before swap, x = "+x+"  y = "+y);
+		int temp=x;
+		x=y;
+		y=temp;
+		System.out.println("Numbers after swap is x = "+x+"  y = "+y);
+	}
+
+}
+
+Q2.	Java Program to Check Whether an Alphabet is Vowel or Consonant.
+
+package Dec14;
+
+import java.util.Scanner;
+
+public class toCheckAlpha {
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Character");
+		char x=sc.next().charAt(0);;
+		if(x=='a' || x=='e'||x=='i'||x=='o'||x=='u'||x=='A'||x=='E'||x=='I'||x=='O'||x=='U')
+		{
+			System.out.println("Vowel");
+		}
+		else
+			System.out.println("Consonant");
+	}
+
+}
+
+
+Q3.	Display Fibonacci Series
+The Fibonacci series is a series where the next term is the sum of the previous two terms. The first two terms of the Fibonacci sequence are 0 followed by 1.
+
+package Dec14;
+
+public class Fibo {
+	public static void main(String[] args)
+	{
+	int a=0;
+	int b=1;
+	int i=0;
+	int c=0;
+	System.out.println(b);
+	while(i<10)
+	{
+		c=a+b;
+		a=b;
+		b=c;
+		System.out.println(c);
+		i++;
+	}
+
+}
+}
+
+Q4.	Find Factorial of a Number
+
+package Dec14;
+
+import java.util.Scanner;
+
+public class Factorial {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number");
+		int x=sc.nextInt();
+		int fact=1;
+		while(x>0)
+		{
+			fact*=x;
+			x--;
+		}
+		System.out.println("Factorial is "+fact);
+	}
+
+}
+
+
+Q5.	Write Text‐Based Application using Object‐Oriented Approach to display your name.
+
+package Dec14;
+class abc
+{
+	void disp()
+	{
+		System.out.println("Sahil Vyas");
+	}
+}
+
+public class Textbased {
+ public static void main(String[] args)
+ {
+	 abc a=new abc();
+	 a.disp();
+ }
+
+}
+
+Q6.	. Create a class called Employee that includes three pieces of information as instance variables—a first name (typeString), 
+a last name (typeString) and a monthly salary (double). Your class should have a constructor that initializes the three instance variables.
+Provide a set and a get method for each instance variable. If the monthly salary is not positive, 
+set it to 0.0. Write a test application named EmployeeTest that demonstrates class Employee’s capabilities. 
+Create two Employee objects and display each object’s yearly salary. Then give each Employee a 10% raise and 
+display each Employee’s yearly salary again. 
+
+package Dec14;
+
+class Employee
+{
+	private String fname;
+	private String lname;
+	private double salary;
+	
+	Employee()         //Constructor
+	{
+	fname=null;
+	lname=null;
+	if(salary>=0)
+	{
+		salary=0.0;
+	}
+	}
+	
+	//getter setter methods
+	public String getFname() {
+		return fname;
+	}
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+	public String getLname() {
+		return lname;
+	}
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	
+	
+	
+	
+}
+public class EmployeeTest {
+
+	public static void main(String[] args)
+	{
+		Employee e=new Employee();
+		Employee e2=new Employee();
+		e.setFname("Sahil ");
+		e.setLname("Vyas");
+		e.setSalary(400000.0);
+		
+		e2.setFname("John ");
+		e2.setLname("Doe");
+		e2.setSalary(600000.0);
+		
+		System.out.println("Employee "+e.getFname()+e.getLname()+" , Salary = "+e.getSalary());
+		System.out.println("Employee "+e2.getFname()+e2.getLname()+" , Salary = "+e2.getSalary());
+		
+		System.out.println("\n\nAfter salary raised\n");
+		System.out.println("Employee "+e.getFname()+e.getLname()+" , Salary = "+e.getSalary()*1.1);
+		System.out.println("Employee "+e2.getFname()+e2.getLname()+" , Salary = "+e2.getSalary()*1.1);
+		
+		
+	}
+
+}
+
+
+Q7.	Create a class called Date that includes three pieces of information as instance variables—a month (typeint), 
+a day (typeint) and a year (typeint). Your class should have a constructor that initializes the three instance
+variables and assumes that the values provided are correct. Provide a set and a get method for each instance variable. 
+Provide a method displayDate that displays the month, day and year separated by forward slashes(/).
+Write a test application named DateTest that demonstrates classDate’s capabilities
+
+package Dec14;
+class Date
+{
+	private int month;
+	private int day;
+	private int year;
+	
+	Date()
+	{
+		month=0;
+		day=0;
+		year=0;
+		
+	}
+	
+	public int getMonth() {
+		return month;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	public int getDay() {
+		return day;
+	}
+
+	public void setDay(int day) {
+		this.day = day;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	void DisplayDate()
+	{
+		System.out.println(getMonth()+"/"+getDay()+"/"+getYear());
+	}
+	
+}
+public class DateTest {
+	
+public static void main(String[] args)
+{
+	Date d=new Date();
+	d.setDay(23);
+	d.setMonth(7);
+	d.setYear(2002);
+	d.DisplayDate();
+}
+}
+
+Q8.	Write an application that displays the numbers 1 to 4 on the same line,
+with each pair of adjacent numbers separated by one space. Write the application using the following techniques:
+a. Use one System.out.println statement.   b. Use four System.out.print statements.   c. Use one System. out. printf statement.
+
+
+package Dec14;
+
+public class Q8 {
+	public static void main(String[] args)
+	{
+		System.out.println("1 2 3 4");
+		System.out.print("1 2 3 4");
+		System.out.print("\n");
+		System.out.printf("%d %d %d %d",1,2,3,4);
+	}
+
+}
+
+
+Q9.	Write an application that inputs three integers from the user and displays the sum, average, product, smallest and largest of the numbers.
+
+package Dec14;
+
+import java.util.Scanner;
+
+public class Q9 {
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter three numbers");
+		int x=sc.nextInt();
+		int y=sc.nextInt();
+		int z=sc.nextInt();
+		int sum =x+y+z;
+		int product=x*y*z;
+		int avg=(x+y+z)/3;
+		int l=x;
+		int s=x;
+		if(y>l)
+		{
+			l=y;
+		}
+		if(z>l)
+			{
+			l=z;
+			}
+		if(y<s)
+		{
+			s=y;
+		}
+		if(z<s)
+		{
+		s=z;	
+		}
+			System.out.println("Sum of numbers "+sum);
+			System.out.println("Product of numbers "+product);
+			System.out.println("Average of numbers "+avg);
+			System.out.println("Smallest & Largest number "+s+" , "+l);
+			
+	}
+
+}
+
+

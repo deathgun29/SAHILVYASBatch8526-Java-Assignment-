@@ -1,0 +1,190 @@
+Q1.	 Java Program to Swap Two Numbers
+
+package Dec14;
+
+import java.util.Scanner;
+
+public class Swapnum {
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter 1st number");
+		int x=sc.nextInt();
+		System.out.println("Enter 2st number");
+		int y=sc.nextInt();
+		System.out.println("Numbers before swap, x = "+x+"  y = "+y);
+		int temp=x;
+		x=y;
+		y=temp;
+		System.out.println("Numbers after swap is x = "+x+"  y = "+y);
+	}
+
+}
+
+Q2.	Java Program to Check Whether an Alphabet is Vowel or Consonant.
+
+package Dec14;
+
+import java.util.Scanner;
+
+public class toCheckAlpha {
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Character");
+		char x=sc.next().charAt(0);;
+		if(x=='a' || x=='e'||x=='i'||x=='o'||x=='u'||x=='A'||x=='E'||x=='I'||x=='O'||x=='U')
+		{
+			System.out.println("Vowel");
+		}
+		else
+			System.out.println("Consonant");
+	}
+
+}
+
+
+Q3.	Display Fibonacci Series
+The Fibonacci series is a series where the next term is the sum of the previous two terms. The first two terms of the Fibonacci sequence are 0 followed by 1.
+
+package Dec14;
+
+public class Fibo {
+	public static void main(String[] args)
+	{
+	int a=0;
+	int b=1;
+	int i=0;
+	int c=0;
+	System.out.println(b);
+	while(i<10)
+	{
+		c=a+b;
+		a=b;
+		b=c;
+		System.out.println(c);
+		i++;
+	}
+
+}
+}
+
+Q4.	Find Factorial of a Number
+
+package Dec14;
+
+import java.util.Scanner;
+
+public class Factorial {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number");
+		int x=sc.nextInt();
+		int fact=1;
+		while(x>0)
+		{
+			fact*=x;
+			x--;
+		}
+		System.out.println("Factorial is "+fact);
+	}
+
+}
+
+
+Q5.	Write Text‐Based Application using Object‐Oriented Approach to display your name.
+
+package Dec14;
+class abc
+{
+	void disp()
+	{
+		System.out.println("Sahil Vyas");
+	}
+}
+
+public class Textbased {
+ public static void main(String[] args)
+ {
+	 abc a=new abc();
+	 a.disp();
+ }
+
+}
+
+Q6.	. Create a class called Employee that includes three pieces of information as instance variables—a first name (typeString), 
+a last name (typeString) and a monthly salary (double). Your class should have a constructor that initializes the three instance variables.
+Provide a set and a get method for each instance variable. If the monthly salary is not positive, 
+set it to 0.0. Write a test application named EmployeeTest that demonstrates class Employee’s capabilities. 
+Create two Employee objects and display each object’s yearly salary. Then give each Employee a 10% raise and 
+display each Employee’s yearly salary again. 
+
+package Dec14;
+
+class Employee
+{
+	private String fname;
+	private String lname;
+	private double salary;
+	
+	Employee()         //Constructor
+	{
+	fname=null;
+	lname=null;
+	if(salary>=0)
+	{
+		salary=0.0;
+	}
+	}
+	
+	//getter setter methods
+	public String getFname() {
+		return fname;
+	}
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+	public String getLname() {
+		return lname;
+	}
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	
+	
+	
+	
+}
+public class EmployeeTest {
+
+	public static void main(String[] args)
+	{
+		Employee e=new Employee();
+		Employee e2=new Employee();
+		e.setFname("Sahil ");
+		e.setLname("Vyas");
+		e.setSalary(400000.0);
+		
+		e2.setFname("John ");
+		e2.setLname("Doe");
+		e2.setSalary(600000.0);
+		
+		System.out.println("Employee "+e.getFname()+e.getLname()+" , Salary = "+e.getSalary());
+		System.out.println("Employee "+e2.getFname()+e2.getLname()+" , Salary = "+e2.getSalary());
+		
+		System.out.println("\n\nAfter salary raised\n");
+		System.out.println("Employee "+e.getFname()+e.getLname()+" , Salary = "+e.getSalary()*1.1);
+		System.out.println("Employee "+e2.getFname()+e2.getLname()+" , Salary = "+e2.getSalary()*1.1);
+		
+		
+	}
+
+}
+
+
